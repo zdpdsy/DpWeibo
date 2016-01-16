@@ -1,0 +1,68 @@
+//
+//  DpWeibo.pch
+//  DpWeibo
+//
+//  Created by 曾大鹏 on 15/12/2.
+//  Copyright © 2015年 曾大鹏. All rights reserved.
+//
+
+#ifndef DpWeibo_pch
+#define DpWeibo_pch
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+#import "UIBarButtonItem+Item.h"
+#define DpKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define DpLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define DpLog(...)
+
+#endif
+#define DpColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+/*stauscell*/
+#define DpStatusCellMargin 10
+#define DpNameFont [UIFont systemFontOfSize:13]
+#define DpTimeFont [UIFont systemFontOfSize:12]
+#define DpSourceFont [UIFont systemFontOfSize:12]
+#define DpUserDefaults  [NSUserDefaults standardUserDefaults]
+#define DpTextFont [UIFont systemFontOfSize:15]
+#define DpSreenW [UIScreen mainScreen].bounds.size.width
+
+
+/** setting*/
+#define DpFontSizeKey @"字号大小"
+#define DpFontSizeChangeNote @"fontSiziChange"
+#define DpSelDownloadKey @"下载质量"
+#define DpSelUploadKey @"上传质量"
+
+/**Oauth配置*/
+#define clientId @"969836814"
+#define clientSecret @"ac06698b881e35dae1cea1bc1d237fbb"
+#define redirectUri @"http://www.baidu.com"
+//"access_token" = "2.00PfbS4DQr1dDBf4cdcef1052z1LzD";
+//uid=3092688913
+#define DpAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
+
+#define DpStatusDockHeight 40
+#define DpTitleLeftEdgeInsets 10
+
+//指定单页评论的条数，默认值为50
+#define DpCommentsCount 10
+//指定单页转发微博的条数，默认值为20，最大值为200
+#define DpRepostsCount 20
+
+//url str
+#define kScanUrlStr @"scanResultString"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* DpWeibo_pch */
