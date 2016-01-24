@@ -42,7 +42,8 @@
 
 #import "DpScanController.h"
 #import "MBProgressHUD+MJ.h"
-@interface DpHomeViewController ()<DpCoverDelegate,DpStatusToolBarDelegate>
+
+@interface DpHomeViewController ()<DpCoverDelegate,DpStatusToolBarDelegate,UIViewControllerPreviewingDelegate>
 @property (nonatomic, weak) DpTitleButton *titleButton;
 
 @property (nonatomic, strong) DpOneViewController *one;
@@ -51,6 +52,7 @@
  viewModel:DpStatusFrame
  */
 @property (strong,nonatomic) NSMutableArray * statusFrames;
+
 @end
 
 @implementation DpHomeViewController
@@ -470,6 +472,38 @@
 }
 
 
+#pragma mark - 3d touch peek and pop代理方法
+-(UIViewController *) previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
+{
+    
+    //防止重复加入
+    if ([self.presentedViewController isKindOfClass:[DpStatusDetailController class]])
+    {
+        return nil;
+    }
+    else
+    {
+        DpStatusDetailController * detail = [[DpStatusDetailController alloc] init];
+        NSIndexPath * indexPath = self.tableView.indexPathForSelectedRow;
+        DpStatusFrame * statusF = self.statusFrames[indexPath.row];
+        detail.status = statusF.status;
+        return detail;
+    }
+}
+
+//压力过大 就是完全显示popView
+-(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
+{
+    
+    DpStatusDetailController * detail = [[DpStatusDetailController alloc] init];
+    NSIndexPath * indexPath = self.tableView.indexPathForSelectedRow;
+    
+    DpStatusFrame * statusF = self.statusFrames[indexPath.row];
+    detail.status = statusF.status;
+    
+    [self showViewController:detail sender:self];
+}
+
 #pragma mark - TableView的代理方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -485,14 +519,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-       DpStatusCell * cell = [DpStatusCell cellWithTableView:tableView];
+    DpStatusCell * cell = [DpStatusCell cellWithTableView:tableView];
     
     //数据模型
     DpStatusFrame * statusF = self.statusFrames[indexPath.row];
     
     cell.statusF = statusF;
     cell.statusToolBar.delegate = self;
+    
+    //为cell 注册3dtouch 代理 如果支持3dtouch
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
+    {
+        [self registerForPreviewingWithDelegate:(id)self sourceView:cell];
+    }
+    
     return cell;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    DpStatusCell *displayCell = (DpStatusCell*)[tableView cellForRowAtIndexPath:indexPath];
+//    
+//    //数据模型
+//    DpStatusFrame * statusF = self.statusFrames[indexPath.row];
+//    
+//    displayCell.statusF = statusF;
+//    displayCell.statusToolBar.delegate = self;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

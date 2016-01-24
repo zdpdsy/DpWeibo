@@ -154,6 +154,7 @@
     DpHomeViewController * home = [[DpHomeViewController alloc] init];
     [self setUpOneChildController:home image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_home_selected"] title:@"首页"];
     _home = home;
+
     
     //消息
     DpMessageViewController * message = [[DpMessageViewController alloc] init];

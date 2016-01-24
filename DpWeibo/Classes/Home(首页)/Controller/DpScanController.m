@@ -37,12 +37,35 @@
     [self setUpAllChildView];
     
     [self startRecoding];
+    
+    if (self.touchOption.length >0) {
+        [self setUpNavgationBar];
+    }
+    
     // Do any additional setup after loading the view.
 }
+
+-(void) setUpNavgationBar
+{
+    UIBarButtonItem *left = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(popToPre) forControlEvents:UIControlEventTouchUpInside];
+    
+    // 设置导航条的按钮
+    self.navigationItem.leftBarButtonItem = left;
+    
+}
+
+-(void) popToPre
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void)setUpAllChildView
 {
     self.title = @"扫一扫";
+    
+    
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIView * viewPre = [[UIView alloc] init];

@@ -173,12 +173,12 @@
  */
 -(void) setUpNavgationBar
 {
+
     //title
     
     self.title = @"发微博";
     //左边
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:0 target:self action:@selector(dismiss)];
-    
      //右边
     //创建一个button
     UIButton * rightbtn = [UIButton buttonWithType:UIButtonTypeCustom];

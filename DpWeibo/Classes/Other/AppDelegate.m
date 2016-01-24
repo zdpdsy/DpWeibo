@@ -15,6 +15,9 @@
 #import "DpAccount.h"
 #import "DpRootTool.h"
 #import "UIImageView+WebCache.h"
+#import "DpComposeViewController.h"
+#import "DpScanController.h"
+#import "DpNavgationController.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) AVAudioPlayer *player;
 @end
@@ -65,6 +68,22 @@
     // 1. application.keyWindow = self.window
     // 2. self.window.hidden = NO;
     [self.window makeKeyAndVisible];
+    
+    
+    // Override point for customization after application launch.
+
+    
+    UIApplicationShortcutItem * shortItem1 = [[UIApplicationShortcutItem alloc]initWithType:@"compose" localizedTitle:@"写微博" localizedSubtitle:@"看我哦" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+
+    
+    
+    UIApplicationShortcutItem * shortItem2 = [[UIApplicationShortcutItem alloc]initWithType:@"scan" localizedTitle:@"扫描二维码" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCapturePhoto] userInfo:nil];
+    
+    
+    NSArray *shortItems = [[NSArray alloc] initWithObjects:shortItem1, shortItem2, nil];
+   // NSLog(@"%@", shortItems);
+    [[UIApplication sharedApplication] setShortcutItems:shortItems];
+    
     
     // Override point for customization after application launch.
     return YES;
@@ -123,7 +142,39 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
+#pragma mark - 3dtouch处理
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    NSLog(@"3d touch begin");
+    //判断先前我们设置的唯一标识
+    if ([shortcutItem.type isEqualToString:@"compose"]) {
 
+        // 创建发送微博控制器
+        DpComposeViewController * compose = [[DpComposeViewController alloc] init];
+        
+        //必须为NavgationController 才能modal
+        DpNavgationController * nav = [[DpNavgationController alloc] initWithRootViewController:compose];
+        
+        //modal 发送微博界面
+        [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
+        
+    }else if ([shortcutItem.type isEqualToString:@"scan"]){
+        
+      
+        
+        // 创建发送微博控制器
+        DpScanController * scan = [[DpScanController alloc] init];
+        scan.touchOption = @"3dtouch";
+        
+        //必须为NavgationController 才能modal
+        DpNavgationController * nav = [[DpNavgationController alloc] initWithRootViewController:scan];
+        
+        //modal 发送微博界面
+        [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
+        
+    }
+
+}
 #pragma mark 程序从后台再次回到前台运行时调用
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     

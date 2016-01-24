@@ -24,6 +24,9 @@
 #import "DpDetailTool.h"
 #import "DpBaseText.h"
 
+#import "DpRepostController.h"
+#import "DpNavgationController.h"
+
 @interface DpStatusDetailController ()<DetailHeaderDelegate>
 
 @property (strong,nonatomic) DpStatusDetailCellFrame * detailFrame;
@@ -91,6 +94,88 @@
     [self addRefresh];
 }
 
+#pragma mark - 3dtouch peek下面的菜单
+-(NSArray<id<UIPreviewActionItem>> *)previewActionItems
+{
+    // 生成UIPreviewAction
+    UIPreviewAction * action1 = [UIPreviewAction actionWithTitle:@"取消关注" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"取消关注");
+    }];
+    
+    
+    UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"分享" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"查看详情");
+    }];
+    
+    UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"置顶聊天" style:UIPreviewActionStyleSelected handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"Action 3 selected");
+    }];
+    
+    //tap
+    
+    UIPreviewAction *tap1 = [UIPreviewAction actionWithTitle:@"tap 1" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"tap 1 selected");
+    }];
+    
+    UIPreviewAction *tap2 = [UIPreviewAction actionWithTitle:@"tap 2" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"tap 2 selected");
+    }];
+    
+    UIPreviewAction *tap3 = [UIPreviewAction actionWithTitle:@"tap 3" style:UIPreviewActionStyleSelected handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"tap 3 selected");
+    }];
+    
+    
+    //分享
+    //微博
+    UIPreviewAction * share1 = [UIPreviewAction actionWithTitle:@"微博" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"转发微博");
+        DpRepostController * repost =[[DpRepostController alloc ] init];
+        
+        repost.weiboId = _status.idstr;
+        
+        DpNavgationController * repostNav = [[DpNavgationController alloc] initWithRootViewController:repost];
+        
+        [DpKeyWindow.rootViewController presentViewController:repostNav animated:YES completion:nil];
+        
+    }];
+    
+    //微信好友
+    UIPreviewAction * share2 = [UIPreviewAction actionWithTitle:@"微信好友" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"转发到微信");
+        
+    }];
+    //QQ
+    UIPreviewAction * share3 = [UIPreviewAction actionWithTitle:@"QQ" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"转发到QQ");
+        
+    }];
+    //支付宝好友
+    
+    UIPreviewAction * share4 = [UIPreviewAction actionWithTitle:@"支付宝好友" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        NSLog(@"转发到支付宝好友");
+        
+    }];
+    
+    // 赛到UIPreviewActionGroup中
+    NSArray *actions = @[action1, action2, action3];
+    NSArray *taps = @[tap1, tap2, tap3];
+    NSArray * shares =@[share1,share2,share3,share4];
+    
+    UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"Action Group" style:UIPreviewActionStyleDefault actions:actions];
+    
+    UIPreviewActionGroup *group2 = [UIPreviewActionGroup actionGroupWithTitle:@"Tap Group" style:UIPreviewActionStyleDefault actions:taps];
+    
+    UIPreviewActionGroup *group3 = [UIPreviewActionGroup actionGroupWithTitle:@"分享.." style:UIPreviewActionStyleDefault actions:shares];
+    
+    UIPreviewActionGroup *group4 = [UIPreviewActionGroup actionGroupWithTitle:@"删除" style:UIPreviewActionStyleDefault actions:taps];
+    
+    
+    NSArray *group = @[group1,group2,group3,group4];
+    
+    return group;
+    
+}
 #pragma mark 添加刷新视图
 -(void)addRefresh
 {

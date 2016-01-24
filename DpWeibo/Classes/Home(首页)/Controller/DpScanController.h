@@ -10,4 +10,8 @@
 
 @interface DpScanController : UIViewController
 
+/**
+ *  3dtouch的操作标识
+ */
+@property (strong,nonatomic) NSString * touchOption;
 @end

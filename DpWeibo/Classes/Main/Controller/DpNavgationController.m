@@ -104,7 +104,6 @@
         //清空滑动返回的代理,就能实现滑动返回的功能
         self.interactivePopGestureRecognizer.delegate = nil;//开始滑动返回
     }
-
 }
 
 /*

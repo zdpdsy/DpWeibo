@@ -68,6 +68,8 @@
     self.viewPreview = viewPreview;
     
     _captureSession = nil;
+    
+    
 }
 
 - (AVCaptureDevice *)getFrontCamera
