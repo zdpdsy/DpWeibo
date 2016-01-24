@@ -48,21 +48,21 @@
 
 ## 预览
 
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo01.jpg)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo01.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo02.jpg)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo02.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo03.jpg)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo03.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo04.png)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo04.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo05.png)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo05.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo06.png)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo06.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo07.png)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo07.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo08.png)
+![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo08.png)
 
 
 ## 鸣谢
