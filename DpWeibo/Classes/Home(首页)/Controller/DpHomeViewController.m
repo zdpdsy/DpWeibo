@@ -193,6 +193,9 @@
 -(void)friendsearch
 {
     
+    DpTwoViewController * two = [[DpTwoViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
+    
+    [self.navigationController pushViewController:two animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

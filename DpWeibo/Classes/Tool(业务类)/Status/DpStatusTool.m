@@ -14,6 +14,7 @@
 #import "DpStatusParam.h"
 #import "DpStatusResult.h"
 
+#import "DpStatusCacheTool.h"
 #import "MJExtension.h"
 
 @implementation DpStatusTool
@@ -36,6 +37,14 @@
 //    
 //    
 //    params[@"max_id"] = maxId;
+    //1.先从数据库去读数据
+    NSArray * statuses = [DpStatusCacheTool statusedWithParam:params];
+    if (statuses.count > 0) {
+        if (success) {
+            success(statuses);
+        }
+        return;
+    }
     
     [DpHttpTool Get:url parameters:params.keyValues success:^(id responseObject) {
         
@@ -53,6 +62,10 @@
         if (success) {
             success(result.statuses);
         }
+        //2.有新的数据 则保存到数据库中 一定要服务器最原始的东西
+        
+        [DpStatusCacheTool saveWithStatuses:responseObject[@"statuses"]];
+        
     } failure:^(NSError *error) {
         if (failure) {
             failure(error);
@@ -79,6 +92,15 @@
 //    
 //    params[@"sinceId"] = sinceId;
     
+     //1.先从数据库去读数据
+    NSArray * statuses = [DpStatusCacheTool statusedWithParam:params];
+    if (statuses.count > 0) {
+        if (success) {
+            success(statuses);
+        }
+        return;
+    }
+     //如果数据库中没有，则想服务器请求数据
     [DpHttpTool Get:url parameters:params.keyValues success:^(id responseObject) {
 //        //数据转模型
 //        //1.获取字典数据
@@ -92,7 +114,9 @@
         if (success) {
             success(result.statuses);
         }
+        //2.数据存储到数据库中
         
+        [DpStatusCacheTool saveWithStatuses:responseObject[@"statuses"]];
     } failure:^(NSError *error) {
         if (failure) {
             failure(error);

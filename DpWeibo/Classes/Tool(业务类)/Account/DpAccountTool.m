@@ -41,12 +41,12 @@ static DpAccount * _account;
     
     DpAccountParam * params = [[DpAccountParam alloc] init];
     
-    params.client_id = clientId;
+    params.client_id = sinaClientId;
     
-    params.client_secret = clientSecret;
+    params.client_secret = sinaClientSecret;
     params.grant_type = @"authorization_code";
     params.code = code;
-    params.redirect_uri = redirectUri;
+    params.redirect_uri = sinaRedirectUri;
     
 //    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
 //    

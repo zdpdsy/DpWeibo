@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Home(&#x9996;&#x9875;)/Model/DpStatus.m"
-            timestampString = "471362420.113128"
+            timestampString = "478008551.369304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-created_at"
             landmarkType = "5">
          </BreakpointContent>
@@ -714,23 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317341.558307"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317341.558307"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -746,11 +730,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317847.381473"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
+            timestampString = "475751440.867991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
             landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317847.381473"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "-tableView:viewForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -778,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317847.381473"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "-tableView:shouldHighlightRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -794,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317847.381473"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-detailHeader:btnClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -826,11 +826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
-            timestampString = "475317847.381473"
+            timestampString = "475751440.867991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -992,6 +992,70 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DpWeibo/Classes/Detail(&#x5fae;&#x535a;&#x6b63;&#x6587;)/Controller/DpStatusDetailController.m"
+            timestampString = "475750570.995989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-dispatch_shareSDK"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DpWeibo/Classes/Other/AppDelegate.m"
+            timestampString = "476181507.589766"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-initShareSDK"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DpWeibo/Classes/Other/AppDelegate.m"
+            timestampString = "476181611.511333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DpWeibo/Classes/DisCover(&#x53d1;&#x73b0;)/View/DPWebViewController.m"
+            timestampString = "477671798.591757"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

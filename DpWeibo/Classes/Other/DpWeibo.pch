@@ -44,11 +44,17 @@
 #define DpSelUploadKey @"上传质量"
 
 /**Oauth配置*/
-#define clientId @"969836814"
-#define clientSecret @"ac06698b881e35dae1cea1bc1d237fbb"
-#define redirectUri @"http://www.baidu.com"
+#define sinaClientId @"969836814"
+#define sinaClientSecret @"ac06698b881e35dae1cea1bc1d237fbb"
+#define sinaRedirectUri @"http://www.baidu.com"
 //"access_token" = "2.00PfbS4DQr1dDBf4cdcef1052z1LzD";
 //uid=3092688913
+
+/**mob appkey*/
+#define mobAppKey @"f43f370b51ec"
+
+
+
 #define DpAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
 
 #define DpStatusDockHeight 40

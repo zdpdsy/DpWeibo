@@ -7,7 +7,8 @@
 //
 
 #import "DpHeaderView.h"
-
+#import "DPWebViewController.h"
+#import "DpNavgationController.h"
 @interface DpHeaderView()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -42,6 +43,10 @@
     for (int i = 0; i < 5; i++) {
         NSString * imgName = [NSString stringWithFormat:@"ad_%02d",i];
         UIImageView * iconView = [[UIImageView alloc] init];
+        iconView.userInteractionEnabled = YES;
+        //监控轮播公告的点击
+        [iconView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showActivityWeb)]];
+        
         [self.scrollView addSubview:iconView];
         UIImage * img = [UIImage imageNamed:imgName];
        
@@ -58,6 +63,14 @@
     [self addtimer0];
 }
 
+-(void)showActivityWeb{
+    NSLog(@"跳转活动首页");
+    DPWebViewController * dpWebVC = [[DPWebViewController alloc] init];
+    
+    DpNavgationController * nav =[[DpNavgationController alloc] initWithRootViewController:dpWebVC];
+    //模态窗口打开webview控制器
+    [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
+}
 - (void) addtimer0{
     //定时器
     
