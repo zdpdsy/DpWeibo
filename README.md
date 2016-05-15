@@ -1,7 +1,7 @@
 # DpWeibo
 模仿新浪微博做的一个ios客户端,仅供学习！
 
-![](demo09.gif)
+![](dpdemo09.gif)
 
 
 
@@ -55,28 +55,25 @@
 11. 实现下拉刷新和上拉加载功能！
 12. 增加3dtouch功能，可以进入发送微博和扫码界面(扫码需真机运行)，同时可以预览微博的详情页!
 
->>>>>>> origin/master
-
-
 
 
 
 ## 预览
-![](demo01.jpg)
+![](dpdemo01.jpg)
 ---
-![](demo02.jpg)
+![](dpdemo02.jpg)
 ---
-![](demo03.jpg)
+![](dpdemo03.jpg)
 ---
-![](demo04.png)
+![](dpdemo04.png)
 ---
-![](demo05.png)
+![](dpdemo05.png)
 ---
-![](demo06.png)
+![](dpdemo06.png)
 ---
-![](demo07.png)
+![](dpdemo07.png)
 ---
-![](demo08.png)
+![](dpdemo08.png)
 
 
 
