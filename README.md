@@ -1,7 +1,7 @@
 # DpWeibo
 模仿新浪微博做的一个ios客户端,仅供学习！
 
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo09.gif)
+![](demo09.gif)
 
 
 
@@ -62,39 +62,21 @@
 
 
 ## 预览
-
-
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo01.jpg)
+![](demo01.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo02.jpg)
+![](demo02.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo03.jpg)
+![](demo03.jpg)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo04.jpg)
+![](demo04.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo05.jpg)
+![](demo05.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo06.jpg)
+![](demo06.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo07.jpg)
+![](demo07.png)
 ---
-![DpWeibo](https://github.com/zdpdsy/DpWeibo/blob/master/demo08.jpg)
-
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo01.jpg)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo02.jpg)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo03.jpg)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo04.png)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo05.png)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo06.png)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo07.png)
----
-![DpWeibo](https://raw.githubusercontent.com/zdpdsy/DpWeibo/master/demo08.png)
+![](demo08.png)
 
 
 
