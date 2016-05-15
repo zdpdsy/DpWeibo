@@ -52,6 +52,9 @@
  */
 
 typedef void(^eblock)(NSError *error);
+typedef int (^gblock)(int a,int b);
+
+typedef NSString* (^testblock)(int a,int b);
 
 typedef void(^sblock)(id responseObject);
 
@@ -109,5 +112,9 @@ typedef void(^sblock)(id responseObject);
  */
 +(void)Upload:(NSString *) url parameters:(id) params uploadParam:(DpUploadParam *) uploadParam success:(void(^)(id responseObject)) success
       failure:(void(^)(NSError * error)) failure;
+
+
++(void)HttpPostTest:(NSString *) url parameters:(id) params success:(NSString* (^)(int a,int b)) success
+        failure:(void(^)(NSError * error)) failure;
 
 @end
